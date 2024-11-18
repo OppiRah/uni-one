@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniONE Portal</title>
-    <link rel="stylesheet" href="StyleSheetGRADES.css">
+    <link rel="stylesheet" href="StyleSheetQUIZZES.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -53,134 +53,65 @@
                 </a>
             </li>
         </ul>
-        </li>
+            </li>
         </ul>
     </div>
 
     <main>
         <section class="table-container">
             <h2>Grading Sheet</h2>
-            <label for="search-bar">Search: </label>
-            <input type="text" id="search-bar" placeholder="Search records...">
+            <label for="search-bar">Select Subject: </label>
+            <select id="subject-dropdown">
+                <option value="" disabled selected>Search Subjects...</option>
+                <option value="hci">Human Computer Interactions</option>
+                <option value="hardware">Computer Hardware</option>
+            </select>
+
+            <div class="subject-title">
+                <h2>SUBJECT: Human & Computer Interactions</h2>
+            </div>
+
+            <div class="activity-title">
+                <h2>Quiz #1</h2>
+            </div>
             <br><br>
             <table>
                 <tr>
                     <th>ID</th>
                     <th>Name of Student</th>
-                    <th>Age</th>
-                    <th>Gender</th>
-
+                    <th>Score</th>
+                    <th>Rating</th>
                 </tr>
-                <tr class="gray-row">
+
+                <tr>
                     <td>23-0131-998</td>
                     <td>Markjason Dulos</td>
-                    <td>19</td>
-                    <td>M</td>
-
-                </tr>
-            </table>
-            <table>
-
-
-            </table>
-
-            <table>
-                <tr>
-                    <th>Year</th>
-                    <th>Subject Code</th>
-                    <th>Subject Title</th>
-                    <th>Grade</th>
-                    <th>Semester</th>
-                </tr>
-
-                <tr>
-
-                    <td>2</td>
-                    <td>CCS 231</td>
-                    <td>Human and Computer Interactions</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>
-
-                <tr class="gray-row">
-
-                    <td>2</td>
-                    <td>CCS 211L</td>
-                    <td>Programming 2</td>
-                    <td>2.25</td>
-                    <td>1</td>
-                </tr>
-
-                <tr>
-
-                    <td>2</td>
-                    <td>CCS 312</td>
-                    <td>Discrete Mathematics</td>
-                    <td>1.25</td>
-                    <td>1</td>
-                </tr>
-
-                <tr class="gray-row">
-
-                    <td>2</td>
-                    <td>CCS 224</td>
-                    <td>SQL</td>
-                    <td>1.75</td>
-                    <td>1</td>
-                </tr>
-
-                <tr>
-
-                    <td>2</td>
-                    <td>GE ELECT idk</td>
-                    <td>Reading Visual Arts</td>
-                    <td>2.25</td>
-                    <td>1</td>
-                </tr>
-
-                <tr class="gray-row">
-
-                    <td>2</td>
-                    <td>GE idk</td>
-                    <td>Life & Works of Rizal</td>
-                    <td>1.25</td>
-                    <td>1</td>
-                </tr>
-
-                <tr>
-
-                    <td>2</td>
-                    <td>GE idk</td>
-                    <td>PE</td>
-                    <td>1.75</td>
-                    <td>1</td>
-                </tr>
-
-            </table>
+                    <td>16/30</td>
+                    <td>D</td>
+                <tr/>
 
         </section>
     </main>
 
-    <script>
+<script>
+const menuItems = document.querySelectorAll('.menu-item');
 
-        const menuItems = document.querySelectorAll('.menu-item');
+menuItems.forEach((item) => {
 
-        menuItems.forEach((item) => {
+    const arrow = item.querySelector('.arrow');
+    const submenu = item.querySelector('ul');
 
-            const arrow = item.querySelector('.arrow');
-            const submenu = item.querySelector('ul');
+    item.addEventListener('click', () => {
+        if (submenu) {
+            submenu.classList.toggle('visible');
+        }
+        if (arrow) {
+            arrow.classList.toggle('rotate');
+        }
+    });
+});
 
-            item.addEventListener('click', () => {
-                if (submenu) {
-                    submenu.classList.toggle('visible');
-                }
-                if (arrow) {
-                    arrow.classList.toggle('rotate');
-                }
-            });
-        });
-
-    </script>
+</script>
 
 </body>
 </html>

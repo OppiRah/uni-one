@@ -66,8 +66,6 @@ header h1 {
     transition: background-color 0.3s, box-shadow 0.3s;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
  }
-
-
 /*SIDEBAR*/
 .sidebar {
     width: 250px;
@@ -107,6 +105,10 @@ header h1 {
     font-weight: normal;
 }
 
+.sidebar .subsubmenu {
+    display:block;
+}
+
 .sidebar .submenu.visible,
 .sidebar .subsubmenu.visible {
     display: block;
@@ -119,6 +121,10 @@ header h1 {
 }
 
 .sidebar .arrow.rotate {
+    transform: rotate(90deg);
+}
+
+.sidebar .menu-item.bold-item .arrow {
     transform: rotate(90deg);
 }
 .menu-item {
@@ -148,16 +154,34 @@ header h1 {
     padding: 5px 0;
 }
 
+.subsubmenu .submenu-link[href="EXAMS-staff.html"],
+.subsubmenu .submenu-link[href="EXAMS-stud.html"] {
+    background-color: #555;
+    color: white;
+    text-align: left;
+    border-radius: 4px;
+    display: block;
+    padding: 5px 10px;
+    min-width: auto;
+    margin: 0;
+    box-sizing: border-box;
+}
+.subsubmenu .submenu-link {
+    padding: 5px 10px;
+    margin: 0;
+    display: block;
+    text-align: left;
+}
 .submenu-link:hover {
     color: #ddd;
     text-decoration: underline;
 }
 
 .highlightrem {
-    background-color: #555;
-    border-radius: 4px;
-    padding: 10px;
-    color: white;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    color: inherit;
     transition: background-color 0.3s ease;
 }
 .menu-item a {
@@ -180,7 +204,7 @@ main {
     background-color: #f4f4f4;
 }
 
-.table-container{
+.table-container {
     text-align: center;
     width: 1000px;
     background-color: white;
@@ -188,6 +212,34 @@ main {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     min-height: 1350px;
+}
+.subject-title {
+    text-align: left;
+    margin: 32px 0 -20px ;
+    font-weight: bold;
+    font-size: 16px;
+}
+.activity-title {
+    text-align: left;
+    margin: 31px 0 -35px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+#subject-dropdown {
+    margin-top: 10px;
+    padding: 5px;
+    width: 225px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fff;
+    appearance: none;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3E%3Cpath fill="gray" d="M7 10l5 5 5-5H7z"%3E%3C/path%3E%3C/svg%3E'); /* Add custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
 }
 
 label {
@@ -197,7 +249,7 @@ label {
 #search-bar {
     margin-top: 10px;
     padding: 5px;
-    width: 300px;
+    width: 500px;
 }
 
 table {
@@ -214,6 +266,58 @@ table {
         word-wrap: break-word;
     }
 
+.add-activity-box {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+    .add-activity-box p {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+.activity-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.option-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.yes-button {
+    background-color: #28a745;
+}
+
+    .yes-button:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+    }
+
+.no-button {
+    background-color: #dc3545;
+}
+    .no-button:hover {
+        background-color: #c82333;
+        transform: scale(1.05);
+    }
 .gray-row {
     background-color: #f0f0f0;
 }

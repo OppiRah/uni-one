@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniONE Portal</title>
+    <link rel="stylesheet" href="StyleSheetGRADES.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-logo-text">
+            <img src="ullogo.png" alt="University Logo" class="logo">
+            <h1>UniONE</h1>
+        </div>
+        <div class="user-options">
+            <a href="loginsignupoliverjansen.html" class="logout">Logout</a>
+        </div>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li class="menu-item bold-item">
+                <span class="icon"><i class="fa-solid fa-house-chimney"></i></span> HOME
+                <span class="arrow">&#9656;</span>
+                <ul class="submenu">
+                    <li><a href="HtmlPageSTUD.html" class="submenu-link">Main Page</a></li>
+                    <li><a href="#" class="submenu-link">Subjects Handled</a></li>
+                    <li><a href="#" class="submenu-link">Feedback</a></li>
+                    <li><a href="#" class="submenu-link">Schedule</a></li>
+                    <li><a href="#" class="submenu-link">Announce</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-item bold-item">
+                <span class="iconSCORE"><i class="fa-solid fa-star"></i></span> SCORES
+                <span class="arrow">&#9656;</span>
+                <ul class="subsubmenu">
+                    <li><a href="#" class="submenu-link">Activities</a></li>
+                    <li><a href="#" class="submenu-link">Exams</a></li>
+                    <li><a href="#" class="submenu-link">Quizzes</a></li>
+                    <li><a href="#" class="submenu-link">Projects</a></li>
+                </ul>
+            </li>
+            <li class="menu-item bold-item highlightrem">
+                <span class="iconREMARKS"><i class="fa-solid fa-clipboard"></i></span>  REMARKS
+            </li>
+        </ul>
+        </li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="table-container">
+            <h2>Grading Sheet</h2>
+            <label for="search-bar">Search: </label>
+            <input type="text" id="search-bar" placeholder="Search records...">
+            <br><br>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name of Student</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+
+                </tr>
+                <tr class="gray-row">
+                    <td>23-0131-998</td>
+                    <td>Markjason Dulos</td>
+                    <td>19</td>
+                    <td>M</td>
+
+                </tr>
+            </table>
+            <table>
+
+
+            </table>
+
+            <table>
+                <tr>
+                    <th>Year</th>
+                    <th>Subject Code</th>
+                    <th>Subject Title</th>
+                    <th>Grade</th>
+                    <th>Semester</th>
+                </tr>
+
+                <tr>
+
+                    <td>2</td>
+                    <td>CCS 231</td>
+                    <td>Human and Computer Interactions</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+
+                <tr class="gray-row">
+
+                    <td>2</td>
+                    <td>CCS 211L</td>
+                    <td>Programming 2</td>
+                    <td>2.5</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+
+                    <td>2</td>
+                    <td>CCS 312</td>
+                    <td>Discrete Mathematics</td>
+                    <td>1.25</td>
+                    <td>1</td>
+                </tr>
+
+                <tr class="gray-row">
+
+                    <td>2</td>
+                    <td>CCS 224</td>
+                    <td>SQL</td>
+                    <td>INC</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+
+                    <td>2</td>
+                    <td>GE ELECT idk</td>
+                    <td>Reading Visual Arts</td>
+                    <td>INC</td>
+                    <td>1</td>
+                </tr>
+
+                <tr class="gray-row">
+
+                    <td>2</td>
+                    <td>GE idk</td>
+                    <td>Life & Works of Rizal</td>
+                    <td>1.25</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+
+                    <td>2</td>
+                    <td>GE idk</td>
+                    <td>PE</td>
+                    <td>INC</td>
+                    <td>1</td>
+                </tr>
+
+            </table>
+
+        </section>
+    </main>
+
+    <script>
+
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        menuItems.forEach((item) => {
+
+            const arrow = item.querySelector('.arrow');
+            const submenu = item.querySelector('ul');
+
+            item.addEventListener('click', () => {
+                if (submenu) {
+                    submenu.classList.toggle('visible');
+                }
+                if (arrow) {
+                    arrow.classList.toggle('rotate');
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,214 @@
+﻿/*for bg*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+
+/*HEADER*/
+header {
+    font-family: Tinos;
+    background-color: maroon;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 70px;
+}
+
+.header-logo-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-left: 123px;
+}
+
+header .logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.user-options {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+
+   
+.user-options a {
+    display: flex;
+    align-items: center;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+
+/*SIDEBAR*/
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    height: 100%;
+    margin-top: 70px;
+    overflow-y: auto;
+    position: fixed;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    position: relative;
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar li:hover {
+    background-color: #555;
+    color: white;
+}
+
+.sidebar .submenu,
+.sidebar .subsubmenu {
+    display: none;
+    padding-left: 8px;
+    margin: 14px;
+    font-weight: normal;
+}
+
+.sidebar .submenu.visible,
+.sidebar .subsubmenu.visible {
+    display: block;
+}
+
+.sidebar .arrow {
+    position: absolute;
+    right: 10px;
+    transition: transform 0.3s;
+}
+
+.sidebar .arrow.rotate {
+    transform: rotate(90deg);
+}
+.menu-item {
+    align-items: center;
+    gap: 5px;
+}
+
+.bold-item {
+    font-weight: bold;
+}
+
+.icon {
+   margin-right: 1px;
+}
+.iconSCORE{
+    margin-left: -1px;
+}
+.iconREMARKS{
+    margin-left: 1px;
+    margin-right: 2px;
+}
+
+.submenu-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 5px 0;
+}
+
+.submenu-link:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.highlightrem {
+    background-color: #555;
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+
+/*gradesss*/
+main {
+    display: flex;
+    margin-left: 500px;
+    padding: 100px 20px;
+    min-height: 1470px;
+    background-color: #f4f4f4;
+}
+
+.table-container {
+    text-align: center;
+    width: 1000px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 1350px;
+}
+
+label {
+    font-weight: bold;
+}
+
+#search-bar {
+    margin-top: 10px;
+    padding: 5px;
+    width: 300px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+    table th, table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+.gray-row {
+    background-color: #f0f0f0;
+}
+
+.white-row {
+    background-color: #fff;
+}

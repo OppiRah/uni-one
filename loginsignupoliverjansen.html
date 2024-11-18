@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Homepage/University of Luzon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: zoomIn 0.5s ease;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .popup-options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+
+            .popup-options img {
+                width: 100px;
+                height: 100px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+
+                .popup-options img:hover {
+                    transform: scale(1.1);
+                }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+  
+    <body>
+
+        <div class="background"></div>
+
+        <div class="container">
+            <div class="content">
+                <h2 class="logo"><i class='bx bxl-firebase'></i>University Of Luzon</h2>
+
+                <div class="text-sci">
+                    <h2>Welcome!<br><span>To University of Luzon Website.</span></h2>
+                    <p>
+                        The University faces the vicissitudes of the future with undiminished hope and optimism as it enters its 76th fruitful year of committed, dedicated, and devoted service in the education of our people.
+                        We remain undaunted by the challenges that lie ahead, for we believe in the capabilities and potential of the Filipino people.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class='bx bx-link-alt'></i></a>
+                        <a href="https://www.facebook.com/luzonuniversity"><i class='bx bxl-facebook-circle'></i></a>
+                        <a href="https://www.instagram.com/ullibraryuniversityofluzon/"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="logreg-box">
+                <div class="form-box login">
+                    <form action="HTMLPage1.html">
+                        <h2>Log In</h2>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-envelope'></i></span>
+                            <input type="email" required name="email_address">
+                            <label>Email</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                            <input type="password" required name="password">
+                            <label>Password</label>
+                        </div>
+
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">Remember me</label>
+                            <a href="#">Forgot Password?</a>
+                        </div>
+
+                        <button type="submit" class="btn">Login</button>
+
+                        <div class="login-register">
+                            <p>Don't have an account? <a href="#" class="register-link">Sign up</a></p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="form-box register">
+                    <form action="#">
+                        <h2>Sign Up</h2>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-user'></i></span>
+                            <input type="text" required>
+                            <label>Name</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-envelope'></i></span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">I agree to the terms & conditions</label>
+                        </div>
+
+                        <button type="submit" class="btn">Sign Up</button>
+
+                        <div class="login-register">
+                            <p>Already have an account? <a href="#" class="login-link">Sign in</a></p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+
+        <!-- pop up -->
+        <div id="popupBox" class="popup">
+            <div class="popup-content">
+                <span class="close-button" onclick="closePopup()">&times;</span>
+                <h2>Login/Signup as</h2>
+                <div class="popup-options">
+                    <!-- them images -->
+                    <a href="loginsignupoliverjansenSTUD.html">
+                        <img src="student.png" alt="Login as Student">
+                        <p>Student</p>
+                    </a>
+                    <a href="loginsignupoliverjansenSTAFF.html">
+                        <img src="faculty.png" alt="Login as Faculty">
+                        <p>Faculty/Staff</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- JS -->
+        <script>
+            function showPopup() {
+                document.getElementById('popupBox').style.display = 'flex';
+                document.querySelector('.container').classList.add('blur');
+            }
+            function closePopup() {
+                document.getElementById('popupBox').style.display = 'none';
+                document.querySelector('.container').classList.remove('blur');
+            }
+            //delay
+            window.onload = function() {
+                setTimeout(showPopup, 0000);
+            };
+
+            function login(userType) {
+                alert("Logging in as " + userType);
+                closePopup();
+            }
+        </script>
+
+    </body>
+</html>

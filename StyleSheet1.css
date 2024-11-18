@@ -1,0 +1,190 @@
+﻿/*for bg header*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Montserrat, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    font-family: Tinos;
+    font-weight: 400;
+    background-image: url(maroonbg.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.user-options {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 32px;
+    right: 50px;
+}
+
+    .user-options a {
+        display: flex;
+        align-items: center;
+        background-color: #d32f2f;
+        color: white;
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        .user-options a:hover {
+            background-color: #ff6666;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .user-options a:active {
+            background-color: #ff6666;
+        }
+
+.left-user-options {
+    position: absolute;
+    top: 20px;
+    right: 1600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+}
+
+.welcome-msg {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.profilepic {
+    width: 60px;
+    height: 60px;
+    border-radius: 20%;
+    object-fit: fill;
+    margin: 0 auto;
+}
+
+.my-profile-link a {
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 0.85em;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.my-profile-link a:hover {
+    background-color: #ff6666;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #990000;
+    padding: 5px;
+}
+
+    .top-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 5px;
+        margin: 0 5px;
+        transition: background-color 0.3s;
+    }
+
+        .top-nav a:hover {
+            background-color: #d32f2f;
+            border-radius: 5px;
+        }
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 80px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    height: calc(100vh - 190px);
+}
+
+
+.content-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 22%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 450px;
+}
+    .content-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+.box-image {
+    width: 90%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    animation: fadeInUp 1s ease forwards;
+}
+/* small animations 4 imgs container hover  */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-box-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+    .content-box-link:hover .content-box {
+        transform: translateY(-5px);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    margin-top: auto;
+}

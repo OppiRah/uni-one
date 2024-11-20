@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -43,7 +44,7 @@
             </section>
         </a>
 
-        <a href="#" class="content-box-link">
+        <a href="SUBJHANDLEDPAGE.html" class="content-box-link">
             <section id="inquiries" class="content-box">
                 <h2>Subjects Handled</h2>
                 <p>Subjects handling.</p>
@@ -51,7 +52,7 @@
             </section>
         </a>
 
-        <a href="#" class="content-box-link">
+        <a href="#" class="content-box-link" id="feedback-link">
             <section id="feedback" class="content-box">
                 <h2>Feedback</h2>
                 <p>Provide feedback to improve our services.</p>
@@ -59,13 +60,39 @@
             </section>
         </a>
 
-        <a href="#" class="content-box-link">
+        <!-- feeback popup-->
+
+        <div id="feedback-popup" class="popup-overlay">
+            <div class="popup-box">
+                <h2><i class="fas fa-envelope"></i> FEEDBACK</h2>
+                <p style="margin-bottom: -14px;">What seems to be your concern?</p>
+                <label for="issues"></label>
+                <select id="issues">
+                    <option value="" disabled selected>Select type of feedback:</option>
+                    <option value="feedb1">School Portal</option>
+                    <option value="feedb2">University Office</option>
+                    <option value="feedb3">University Services</option>
+                    <option value="feedb4">Administration</option>
+                </select>
+                <p style="font-size: 90%;">Subject</p>
+                <input type="text" id="feedback-subject" placeholder="Enter subject here">
+                <p style="font-size: 90%">Content</p>
+                <textarea id="feedback-content" rows="5" placeholder="Write your feedback here..."></textarea>
+                <button id="submit-feedback" style="background-color: #87CEFA;">Submit</button>
+            </div>
+        </div>
+        <!--efhefuehfhefhuf c-->
+
+        <a href="SCHEDULEPAGE.html" class="content-box-link">
             <section id="schedule" class="content-box">
                 <h2>Schedule</h2>
                 <p>View & edit students schedule for the semester.</p>
                 <img src="schedule.png" alt="Schedule" class="box-image" />
             </section>
         </a>
+
+
+        <!--en of scheddd ogranvafq3fiugweuf-->
 
         <a href="#" class="content-box-link">
             <section id="announcements" class="content-box">
@@ -79,6 +106,24 @@
     <footer>
         <p>&copy; 2024 University of Luzon. All rights reserved.</p>
     </footer>
+
+    <!--ffeedback popup-->
+
+    <script>
+        const feedbackLink = document.getElementById('feedback-link');
+        const feedbackPopup = document.getElementById('feedback-popup');
+        const feedbackSubmit = document.getElementById('submit-feedback');
+
+        feedbackLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            feedbackPopup.style.display = 'flex';
+        });
+
+        feedbackSubmit.addEventListener('click', () => {
+            feedbackPopup.style.display = 'none';
+        });
+
+    </script>
 
 
 </body>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniONE Portal</title>
-    <link rel="stylesheet" href="StyleSheetEXAMS.css">
+    <link rel="stylesheet" href="StyleSheetSUBJHAND.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -25,33 +25,18 @@
     </header>
     <div class="sidebar">
         <ul>
-            <li class="menu-item bold-item">
+            <li class="menu-item bold-item open">
                 <span class="icon"><i class="fa-solid fa-house-chimney"></i></span> HOME
                 <span class="arrow">&#9656;</span>
                 <ul class="submenu">
-                    <li><a href="HTMLPageSTUD.html?email_address=?&password=?" class="submenu-link">Main Page</a></li>
-                    <li><a href="#" class="submenu-link">Subjects Handled</a></li>
+                    <li><a href="HTMLPageSTAFF.html?email_address=?&password=?" class="submenu-link">Main Page</a></li>
+                    <li><a href="SUBJHANDLEDPAGE.html" class="submenu-link">Subjects Handled</a></li>
                     <li><a href="#" class="submenu-link">Feedback</a></li>
                     <li><a href="#" class="submenu-link">Schedule</a></li>
                     <li><a href="#" class="submenu-link">Announce</a></li>
                 </ul>
             </li>
 
-            <li class="menu-item bold-item">
-                <span class="iconSCORE"><i class="fa-solid fa-star"></i></span> SCORES
-                <span class="arrow">&#9656;</span>
-                <ul class="subsubmenu">
-                    <li><a href="ACTIVITIES-stud.html" class="submenu-link">Activities</a></li>
-                    <li><a href="EXAMS-stud.html" class="submenu-link">Exams</a></li>
-                    <li><a href="QUIZZES-stud.html" class="submenu-link">Quizzes</a></li>
-                    <li><a href="PROJECTS-stud.html" class="submenu-link">Projects</a></li>
-                </ul>
-            </li>
-            <li class="menu-item bold-item highlightrem">
-                <a href="gradesSTUD.html" class="iconREMARKS">
-                    <i class="fa-solid fa-clipboard"></i> REMARKS
-                </a>
-            </li>
         </ul>
             </li>
         </ul>
@@ -59,39 +44,68 @@
 
     <main>
         <section class="table-container">
-            <h2>Grading Sheet</h2>
-            <label for="search-bar">Select Subject: </label>
-            <select id="subject-dropdown">
-                <option value="" disabled selected>Search Subjects...</option>
-                <option value="hci">Human Computer Interactions</option>
-                <option value="hardware">Computer Hardware</option>
-            </select>
-
-            <div class="subject-title">
-                <h2>SUBJECT: Human & Computer Interactions</h2>
-            </div>
-
-            <!-- Prelims Exam -->
-            <div class="activity-title">
-                <h2>Preliminary Exam</h2>
-            </div>
+            <h2>Scheduling</h2>
+            <label for="search-bar">Search: </label>
+            <input type="text" id="search-bar" placeholder="Search subjects...">
+            <div class="sem-title">1st SEMESTER, 2024-25</div>
             <br><br>
             <table>
                 <tr>
-                    <th>ID</th>
-                    <th>Name of Student</th>
-                    <th>Score</th>
-                    <th>Rating</th>
+                    <th>Subject Code</th>
+                    <th>Subject Name</th>
+                    <th>Time</th>
+                    <th>Day</th>
+                    <th>Room</th>
+                </tr>
+                <tr class="gray-row">
+                    <td>CCS 231</td>
+                    <td>Human & Computer Interaction</td>
+                    <td>10:00am - 11:00am</td>
+                    <td>MWF</td>
+                    <td>LR5</td>
+                </tr>                
+                
+                <tr>
+                    <td>Sample Code</td>
+                    <td>Sample Name</td>
+                    <td>Sample Time</td>
+                    <td>MWF</td>
+                    <td>Sample Room</td>
+                </tr>                
+                
+                <tr class="gray-row">
+                    <td>Sample Code</td>
+                    <td>Sample Name</td>
+                    <td>Sample Time</td>
+                    <td>MWF</td>
+                    <td>Sample Room</td>
+                </tr>                
+                
+                <tr>
+                    <td>Sample Code</td>
+                    <td>Sample Name</td>
+                    <td>Sample Time</td>
+                    <td>MWF</td>
+                    <td>Sample Room</td>
+                </tr>
+
+                <tr class="gray-row">
+                    <td>Sample Code</td>
+                    <td>Sample Name</td>
+                    <td>Sample Time</td>
+                    <td>MWF</td>
+                    <td>Sample Room</td>
                 </tr>
 
                 <tr>
-                    <td>23-0131-998</td>
-                    <td>Markjason Dulos</td>
-                    <td>79/100</td>
-                    <td>C</td>
+                    <td>Sample Code</td>
+                    <td>Sample Name</td>
+                    <td>Sample Time</td>
+                    <td>MWF</td>
+                    <td>Sample Room</td>
                 </tr>
-            </table>
 
+            </table>
 
         </section>
     </main>

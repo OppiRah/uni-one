@@ -55,7 +55,7 @@
 
         <div id="inquiries-popup" class="popup-overlay">
             <div class="popup-box">
-                <button class="popup-close-btn" onclick="closePopup('inquiries-popup')" >&times;</button>
+                <img src="close-icon.png" alt="Close" id="close-inquiries" class="popup-close-image">
                 <div class="popup-header">
                     <img src="clipboard.png" alt="Clipboard Icon" class="popup-icon">
                     <h2>INQUIRIES</h2>
@@ -88,8 +88,9 @@
 
         <div id="feedback-popup" class="popup-overlay">
             <div class="popup-box">
-                <button class="popup-close-btn" onclick="closePopup('feedback-popup')" >&times;</button>
+                <img src="close-icon.png" alt="Close" id="close-feedback" class="popup-close-image">
                 <div class="popup-header">
+                    <img src="envelope.png" alt="Feedback Icon" class="popup-icon">
                     <h2>FEEDBACK</h2>
                 </div>
                 <p style="margin-bottom: -14px;">What seems to be your concern?</p>
@@ -135,8 +136,10 @@
     <!--ffeedback popup-->
 
     <script>
+
         const feedbackLink = document.getElementById('feedback-link');
         const feedbackPopup = document.getElementById('feedback-popup');
+        const closeFeedback = document.getElementById('close-feedback');
         const feedbackSubmit = document.getElementById('submit-feedback');
 
         feedbackLink.addEventListener('click', (e) => {
@@ -144,14 +147,9 @@
             feedbackPopup.style.display = 'flex';
         });
 
-        feedbackSubmit.addEventListener('click', () => {
+        closeFeedback.addEventListener('click', () => {
             feedbackPopup.style.display = 'none';
         });
-
-        function closePopup(popupId) {
-            const popup = document.getElementById(popupId);
-            popup.style.display = 'none';
-        }
 
     </script>
 
@@ -160,6 +158,7 @@
     <script>
         const inquiriesLink = document.getElementById('inquiries-link');
         const inquiriesPopup = document.getElementById('inquiries-popup');
+        const closeInquiries = document.getElementById('close-inquiries');
         const inquiriesSubmit = document.getElementById('submit-inquiries');
 
         inquiriesLink.addEventListener('click', (e) => {
@@ -167,15 +166,13 @@
             inquiriesPopup.style.display = 'flex';
         });
 
-        inquiriesSubmit.addEventListener('click', () => {
+        closeInquiries.addEventListener('click', () => {
             inquiriesPopup.style.display = 'none';
         });
 
-        function closePopup(popupId) {
-            const popup = document.getElementById(popupId);
-            popup.style.display = 'none';
-        }
-
+        inquiriesSubmit.addEventListener('click', () => {
+            inquiriesPopup.style.display = 'none';
+        });
     </script>
 
 </body>

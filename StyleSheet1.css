@@ -269,21 +269,19 @@ header {
     flex-grow: 1;
 }
 
-.popup-close-btn {
+.popup-close-image {
     position: absolute;
-    top: 10px;
-    right: 23px;
-    background: none;
-    border: none;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #990000;
+    top: 16px;
+    right: 18px;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
-    padding: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.popup-close-btn:hover {
-    color: #d32f2f;
+.popup-close-image:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 .popup-header {

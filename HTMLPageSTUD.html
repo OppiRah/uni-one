@@ -19,12 +19,12 @@
 
         <div class="user-options">
             <a href="loginsignupoliverjansen.html" class="logout">Logout</a>
-            
-        <div class="left-user-options">
-            <p class="welcome-msg">Welcome, Markjason!</p>
-            <img src="profilepic.jpg" alt="Profile Picture" class="profilepic">
-            <a href="#" class="my-profile">My Profile</a>
-        </div>
+
+            <div class="left-user-options">
+                <p class="welcome-msg">Welcome, Markjason!</p>
+                <img src="profilepic.jpg" alt="Profile Picture" class="profilepic">
+                <a href="#" class="my-profile">My Profile</a>
+            </div>
         </div>
     </header>
 
@@ -43,7 +43,7 @@
             </section>
         </a>
 
-        <a href="#" class="content-box-link">
+        <a href="#" class="content-box-link" id="inquiries-link">
             <section id="inquiries" class="content-box">
                 <h2>Inquiries</h2>
                 <p>Submit any inquiries regarding courses or administration.</p>
@@ -51,13 +51,65 @@
             </section>
         </a>
 
-        <a href="#" class="content-box-link">
+        <!--inquiries popup-->
+
+        <div id="inquiries-popup" class="popup-overlay">
+            <div class="popup-box">
+                <button class="popup-close-btn" onclick="closePopup('inquiries-popup')" >&times;</button>
+                <div class="popup-header">
+                    <img src="clipboard.png" alt="Clipboard Icon" class="popup-icon">
+                    <h2>INQUIRIES</h2>
+                </div>
+                <p style="margin-bottom: -14px;">Who would you inquire to?</p>
+                <label for="issues"></label>
+                <select id="issues">
+                    <option value="" disabled selected>Select who you would like to inquire:</option>
+                    <option value="feedb1">Sir Botski (CCS 231)</option>
+                    <option value="feedb2">Ma'am Bing</option>
+                    <option value="feedb3">Administration</option>
+                </select>
+                <p style="font-size: 90%">Content</p>
+                <textarea id="feedback-content" rows="5" placeholder="Write your inquiries here..."></textarea>
+                <button id="submit-inquiries" style="background-color: #87CEFA;">Submit</button>
+            </div>
+        </div>
+
+        <!--inquriueisend-->
+
+        <a href="#" class="content-box-link" id="feedback-link">
             <section id="feedback" class="content-box">
                 <h2>Feedback</h2>
                 <p>Provide feedback to improve our services.</p>
                 <img src="feedback.png" alt="Feedback" class="box-image" />
             </section>
         </a>
+
+        <!-- feeback popup-->
+
+        <div id="feedback-popup" class="popup-overlay">
+            <div class="popup-box">
+                <button class="popup-close-btn" onclick="closePopup('feedback-popup')" >&times;</button>
+                <div class="popup-header">
+                    <h2>FEEDBACK</h2>
+                </div>
+                <p style="margin-bottom: -14px;">What seems to be your concern?</p>
+                <label for="issues"></label>
+                <select id="issues">
+                    <option value="" disabled selected>Select type of feedback:</option>
+                    <option value="feedb1">School Portal</option>
+                    <option value="feedb2">University Office</option>
+                    <option value="feedb3">University Services</option>
+                    <option value="feedb4">Administration</option>
+                </select>
+                <p style="font-size: 90%;">Subject</p>
+                <input type="text" id="feedback-subject" placeholder="Enter subject here">
+                <p style="font-size: 90%">Content</p>
+                <textarea id="feedback-content" rows="5" placeholder="Write your feedback here..."></textarea>
+                <button id="submit-feedback" style="background-color: #87CEFA;">Submit</button>
+            </div>
+        </div>
+
+        <!--efhefuehfhefhuf c-->
 
         <a href="#" class="content-box-link">
             <section id="schedule" class="content-box">
@@ -80,6 +132,51 @@
         <p>&copy; 2024 University of Luzon. All rights reserved.</p>
     </footer>
 
+    <!--ffeedback popup-->
+
+    <script>
+        const feedbackLink = document.getElementById('feedback-link');
+        const feedbackPopup = document.getElementById('feedback-popup');
+        const feedbackSubmit = document.getElementById('submit-feedback');
+
+        feedbackLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            feedbackPopup.style.display = 'flex';
+        });
+
+        feedbackSubmit.addEventListener('click', () => {
+            feedbackPopup.style.display = 'none';
+        });
+
+        function closePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.style.display = 'none';
+        }
+
+    </script>
+
+    <!--inquiries popup-->
+
+    <script>
+        const inquiriesLink = document.getElementById('inquiries-link');
+        const inquiriesPopup = document.getElementById('inquiries-popup');
+        const inquiriesSubmit = document.getElementById('submit-inquiries');
+
+        inquiriesLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            inquiriesPopup.style.display = 'flex';
+        });
+
+        inquiriesSubmit.addEventListener('click', () => {
+            inquiriesPopup.style.display = 'none';
+        });
+
+        function closePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.style.display = 'none';
+        }
+
+    </script>
 
 </body>
 </html>

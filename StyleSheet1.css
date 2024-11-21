@@ -197,6 +197,7 @@ header {
 
 /*feedback popup*/
 .popup-box {
+    position: relative;
     background-color: white;
     padding: 30px;
     border-radius: 10px;
@@ -266,4 +267,35 @@ header {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+}
+
+.popup-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 23px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #990000;
+    cursor: pointer;
+    padding: 0;
+}
+
+.popup-close-btn:hover {
+    color: #d32f2f;
+}
+
+.popup-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.popup-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
 }

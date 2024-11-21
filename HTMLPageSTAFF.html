@@ -64,7 +64,10 @@
 
         <div id="feedback-popup" class="popup-overlay">
             <div class="popup-box">
-                <h2><i class="fas fa-envelope"></i> FEEDBACK</h2>
+                <button class="popup-close-btn" onclick="closePopup('feedback-popup')" >&times;</button>
+                <div class="popup-header">
+                    <h2>FEEDBACK</h2>
+                </div>
                 <p style="margin-bottom: -14px;">What seems to be your concern?</p>
                 <label for="issues"></label>
                 <select id="issues">
@@ -122,6 +125,11 @@
         feedbackSubmit.addEventListener('click', () => {
             feedbackPopup.style.display = 'none';
         });
+
+        function closePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.style.display = 'none';
+        }
 
     </script>
 
